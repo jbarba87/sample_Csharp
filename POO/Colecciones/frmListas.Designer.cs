@@ -46,6 +46,7 @@ namespace POO.Colecciones
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.brnExportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,11 +207,22 @@ namespace POO.Colecciones
             this.label1.Text = "Codigo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // brnExportar
+            // 
+            this.brnExportar.Location = new System.Drawing.Point(300, 96);
+            this.brnExportar.Name = "brnExportar";
+            this.brnExportar.Size = new System.Drawing.Size(75, 23);
+            this.brnExportar.TabIndex = 26;
+            this.brnExportar.Text = "Exportar";
+            this.brnExportar.UseVisualStyleBackColor = true;
+            this.brnExportar.Click += new System.EventHandler(this.brnExportar_Click);
+            // 
             // frmListas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 430);
+            this.Controls.Add(this.brnExportar);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGrabar);
@@ -251,5 +263,6 @@ namespace POO.Colecciones
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button brnExportar;
     }
 }

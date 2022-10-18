@@ -58,6 +58,18 @@
     <Compile Include="Aplicaciones\NewFolder1\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Archivos\frmEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archivos\frmEditor.Designer.cs">
+      <DependentUpon>frmEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\frmExplorador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archivos\frmExplorador.Designer.cs">
+      <DependentUpon>frmExplorador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Producto.cs" />
@@ -111,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicaciones\NewFolder1\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archivos\frmEditor.resx">
+      <DependentUpon>frmEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archivos\frmExplorador.resx">
+      <DependentUpon>frmExplorador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Colecciones\frmArreglos.resx">
       <DependentUpon>frmArreglos.cs</DependentUpon>

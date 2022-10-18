@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace POO.Colecciones
 {
@@ -144,6 +145,45 @@ namespace POO.Colecciones
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void brnExportar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // crear un cuadro de dialogo para guardar archivos 
+                SaveFileDialog cd = new SaveFileDialog();
+
+                // Filtrar solo para visualizar archivos de texto
+                cd.Filter = "Archivos de texto (*.txt) | *.txt";
+
+                //Mostrar la ventana de dialogo
+                cd.ShowDialog();
+
+                // Capturar el nombre del archivo
+                string arch = cd.FileName;
+                //GuardarArchivo(arch, txtEditor.Text);
+
+                string texto = "";
+                foreach (Clases.Producto producto in productos) {
+                    texto += producto.Codigo + " " + producto.Nombre + " " + Convert.ToString(producto.Precio) + " " + Convert.ToString(producto.Stock) + "\n";
+
+                }
+                GuardarArchivo(arch, texto);
+                MessageBox.Show("Archivo guardado");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //throw;
+            }
+        }
+
+        void GuardarArchivo(string ruta, string texto)
+        {
+            StreamWriter sw = new StreamWriter(ruta);
+            sw.Write(texto);
+            sw.Close();
         }
     }
 }
