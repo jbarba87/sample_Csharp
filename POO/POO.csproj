@@ -52,6 +52,18 @@
     <Compile Include="Aplicaciones\frmEmpleados.Designer.cs">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Aplicaciones\frmNavegador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicaciones\frmNavegador.Designer.cs">
+      <DependentUpon>frmNavegador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicaciones\frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicaciones\frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Aplicaciones\NewFolder1\frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Aplicaciones\frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicaciones\frmNavegador.resx">
+      <DependentUpon>frmNavegador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicaciones\frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicaciones\NewFolder1\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>

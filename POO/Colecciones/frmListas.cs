@@ -45,6 +45,11 @@ namespace POO.Colecciones
                 dgvProductos.DataSource = null;
                 dgvProductos.DataSource = productos;
 
+                txtTotal.Text = Totalizar(dgvProductos, 2).ToString();
+                txtTotalRegistros.Text = productos.Count.ToString();
+                //txtTotalRegistros.Text = dgvProductos.Rows.Count.ToString();
+
+
             }
             catch (Exception ex)
             {
@@ -98,7 +103,7 @@ namespace POO.Colecciones
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
+                //throw;
             }
         }
 
@@ -179,11 +184,57 @@ namespace POO.Colecciones
             }
         }
 
-        void GuardarArchivo(string ruta, string texto)
-        {
+        void GuardarArchivo(string ruta, string texto){
             StreamWriter sw = new StreamWriter(ruta);
             sw.Write(texto);
             sw.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e){
+        }
+
+        private void txtTotal_TextChanged(object sender, EventArgs e){
+        }
+
+        decimal Totalizar(DataGridView dgv, int numcolumna) {
+            decimal total = 0;
+            foreach (DataGridViewRow fila in dgv.Rows){
+                total += Convert.ToDecimal(fila.Cells[numcolumna].Value);
+            }
+            return total;
+        }
+
+        bool SoloNumeros(int tecla){
+            if ((tecla >= 48 && tecla <= 57) || tecla == 8)
+            {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        bool SoloLetras(int tecla){
+            if ((tecla < 48 || tecla > 57) || tecla == 8){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+
+
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e){
+            e.Handled = SoloNumeros(e.KeyChar);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e){
+            e.Handled = SoloLetras(e.KeyChar);
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

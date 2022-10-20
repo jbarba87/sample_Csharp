@@ -47,6 +47,11 @@ namespace POO.Colecciones
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.brnExportar = new System.Windows.Forms.Button();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTotalRegistros = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,6 +147,7 @@ namespace POO.Colecciones
             this.txtStock.Size = new System.Drawing.Size(100, 20);
             this.txtStock.TabIndex = 20;
             this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
+            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
             // 
             // label4
             // 
@@ -178,6 +184,7 @@ namespace POO.Colecciones
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 16;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label2
             // 
@@ -191,16 +198,16 @@ namespace POO.Colecciones
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(114, 18);
+            this.txtCodigo.Location = new System.Drawing.Point(67, 16);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(64, 20);
             this.txtCodigo.TabIndex = 14;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 21);
+            this.label1.Location = new System.Drawing.Point(17, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 13;
@@ -217,11 +224,60 @@ namespace POO.Colecciones
             this.brnExportar.UseVisualStyleBackColor = true;
             this.brnExportar.Click += new System.EventHandler(this.brnExportar_Click);
             // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(350, 377);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(112, 20);
+            this.txtTotal.TabIndex = 27;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(251, 383);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Total";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // txtTotalRegistros
+            // 
+            this.txtTotalRegistros.Location = new System.Drawing.Point(97, 373);
+            this.txtTotalRegistros.Name = "txtTotalRegistros";
+            this.txtTotalRegistros.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalRegistros.TabIndex = 29;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 376);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 13);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Total Registros";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(145, 18);
+            this.maskedTextBox1.Mask = "00:00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(69, 20);
+            this.maskedTextBox1.TabIndex = 31;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
             // frmListas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 430);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtTotalRegistros);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.brnExportar);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.btnEliminar);
@@ -264,5 +320,10 @@ namespace POO.Colecciones
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button brnExportar;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTotalRegistros;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

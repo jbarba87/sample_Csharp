@@ -130,5 +130,10 @@ namespace POO.Colecciones
                 //throw;
             }
         }
+
+        private void dtpFIngreso_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

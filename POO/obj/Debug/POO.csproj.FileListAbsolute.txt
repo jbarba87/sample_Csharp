@@ -18,3 +18,5 @@ C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Colecciones.frmColas.resource
 C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Colecciones.frmPilas.resources
 C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Archivos.frmExplorador.resources
 C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Archivos.frmEditor.resources
+C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Aplicaciones.frmNavegador.resources
+C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Aplicaciones.frmPagos.resources
