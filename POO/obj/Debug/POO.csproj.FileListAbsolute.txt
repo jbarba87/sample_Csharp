@@ -20,3 +20,5 @@ C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Archivos.frmExplorador.resour
 C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Archivos.frmEditor.resources
 C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Aplicaciones.frmNavegador.resources
 C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Aplicaciones.frmPagos.resources
+C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Hilos.frmHilos.resources
+C:\Users\jbarba\source\repos\POO\POO\obj\Debug\POO.Temporizador.frmRelog.resources

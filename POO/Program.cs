@@ -16,10 +16,12 @@ namespace POO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            Application.Run(new Form1());
 
             //Application.Run(new Colecciones.frmListas());
-            Application.Run(new Aplicaciones.frmPagos());
+            //Application.Run(new Aplicaciones.frmPagos());
+            //Application.Run(new Hilos.frmHilos());
+            //Application.Run(new Temporizador.frmRelog());
         }
     }
 }
